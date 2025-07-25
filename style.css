@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60, 60, 60, 0.15);
+    padding: 32px 24px;
+}
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    color: #ff7e5f;
+    letter-spacing: 2px;
+}
+#current-date, #season {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 4px 0;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+}
+#calendar-section {
+    flex: 2 1 350px;
+}
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+#calendar .day, #calendar .date {
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-weight: 500;
+}
+#calendar .day {
+    background: #ffe0c3;
+    color: #ff7e5f;
+}
+#calendar .date {
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+#calendar .date.today {
+    background: #ffb88c;
+    color: #fff;
+    font-weight: bold;
+}
+#calendar .date.has-event {
+    border: 2px solid #ff7e5f;
+}
+#event-section {
+    flex: 1 1 220px;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+#event-section h2 {
+    color: #ff7e5f;
+    margin-top: 0;
+}
+#event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+#event-form input, #event-form button {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+#event-form button {
+    background: #ff7e5f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+#event-form button:hover {
+    background: #ffb88c;
+}
+#event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#event-list li {
+    background: #fff3e6;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #a65c00;
+    font-size: 1rem;
+}
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .container {
+        padding: 16px 4px;
+    }
+} 

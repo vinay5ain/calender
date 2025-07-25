@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Calendar</h1>
+            <div id="current-date"></div>
+            <div id="season"></div>
+        </header>
+        <main>
+            <section id="calendar-section">
+                <div id="calendar"></div>
+            </section>
+            <section id="event-section">
+                <h2>Set Event</h2>
+                <form id="event-form">
+                    <input type="date" id="event-date" required>
+                    <input type="text" id="event-title" placeholder="Event Title" required>
+                    <button type="submit">Add Event</button>
+                </form>
+                <ul id="event-list"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
